@@ -6,6 +6,6 @@
     flake-utils.lib.eachDefaultSystem (system: rec {
       packages =
         import ./default.nix { pkgs = import nixpkgs { inherit system; }; };
-      overlay = final: prev: {};
+      overlay = import ./overlay.nix;
     });
 }

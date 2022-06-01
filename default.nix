@@ -13,5 +13,5 @@
   modules = import ./modules; # NixOS modules
   overlays = import ./overlays; # nixpkgs overlays
 
-  kodi-moonlight-qt =  pkgs.callPackage ./pkgs/kodi-moonlight-qt {};
+  kodi-moonlight-qt = pkgs.callPackage ./pkgs/kodi-moonlight-qt { };
 }
