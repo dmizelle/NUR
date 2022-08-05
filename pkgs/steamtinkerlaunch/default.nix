@@ -1,7 +1,7 @@
 { stdenv, lib, fetchFromGitHub, git, unzip, xdotool, xwininfo, yad, makeWrapper
 , coreutils-full, xprop, xrandr, gawk, gnugrep, strace, gamemode, mangohud
 , winetricks, vkBasalt, nettools, jq, imagemagick, rsync, p7zip, findutils
-, gnused, diffutils, procps, gnutar, wget, vim }:
+, gnused, diffutils, procps, gnutar, wget, vim, file }:
 stdenv.mkDerivation rec {
   pname = "steamtinkerlaunch";
   version = "10.0";
@@ -16,33 +16,34 @@ stdenv.mkDerivation rec {
   nativeBuildInputs = [ makeWrapper ];
 
   buildInputs = [
-    unzip
-    xdotool
-    xwininfo
-    yad
     coreutils-full
     diffutils
-    procps
-    gnutar
-    wget
-    vim
-    gnused
+    file
     findutils
+    gamemode
+    gawk
     git
+    gnugrep
+    gnused
+    gnutar
+    imagemagick
+    jq
+    mangohud
+    nettools
+    p7zip
+    procps
+    rsync
+    strace
+    unzip
+    vim
+    vkBasalt
+    wget
+    winetricks
+    xdotool
     xprop
     xrandr
-    gawk
-    gnugrep
-    strace
-    gamemode
-    mangohud
-    winetricks
-    vkBasalt
-    nettools
-    jq
-    imagemagick
-    rsync
-    p7zip
+    xwininfo
+    yad
   ];
 
   installPhase = ''
