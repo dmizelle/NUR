@@ -8,10 +8,10 @@
 
 { pkgs ? import <nixpkgs> { } }:
 
-{
+rec {
   lib = import ./lib { inherit pkgs; }; # functions
   modules = import ./modules; # NixOS modules
   overlays = import ./overlays; # nixpkgs overlays
 
-  kodi-moonlight-qt = pkgs.callPackage ./pkgs/kodi-moonlight-qt { };
+  steamtinkerlaunch = pkgs.callPackage ./pkgs/steamtinkerlaunch { };
 }
