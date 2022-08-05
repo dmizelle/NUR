@@ -13,7 +13,7 @@ stdenv.mkDerivation rec {
     sha256 = "sha256-Fa7DXEIi9MIwj+48eGPE/sKfgy6aOZiWyJ0KrbHuhyQ=";
   };
 
-  patches = [ ./001-bash-safe-mode.patch ];
+  #patches = [ ./001-bash-safe-mode.patch ];
 
   nativeBuildInputs = [ makeWrapper ];
 
