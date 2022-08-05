@@ -1,7 +1,7 @@
 { stdenv, lib, fetchFromGitHub, git, unzip, xdotool, xwininfo, yad, makeWrapper
 , coreutils-full, xprop, xrandr, gawk, gnugrep, strace, gamemode, mangohud
 , winetricks, vkBasalt, nettools, jq, imagemagick, rsync, p7zip, findutils
-, gnused, diffutils, procps, gnutar, wget, vim, file }:
+, gnused, diffutils, procps, gnutar, wget, vim, file, python3 }:
 stdenv.mkDerivation rec {
   pname = "steamtinkerlaunch";
   version = "10.0";
@@ -32,6 +32,7 @@ stdenv.mkDerivation rec {
     nettools
     p7zip
     procps
+    python3
     rsync
     strace
     unzip
