@@ -1,0 +1,13 @@
+diff --git a/steamtinkerlaunch b/steamtinkerlaunch
+index ee9ce09..1cd5e0e 100755
+--- a/steamtinkerlaunch
++++ b/steamtinkerlaunch
+@@ -1,6 +1,8 @@
+ #!/usr/bin/env bash
+ # shellcheck source=/dev/null
+ 
++set -euo pipefail
++
+ ### project ###
+ 
+ PREFIX="/usr"
