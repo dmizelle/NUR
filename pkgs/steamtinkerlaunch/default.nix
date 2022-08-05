@@ -1,6 +1,7 @@
 { stdenv, lib, fetchFromGitHub, git, unzip, xdotool, xwininfo, yad, makeWrapper
-, coreutils, busybox, xprop, xrandr, gawk, gnugrep, strace, gamemode, mangohud
-, winetricks, vkBasalt, nettools, jq, imagemagick, rsync, p7zip }:
+, coreutils-full, xprop, xrandr, gawk, gnugrep, strace, gamemode, mangohud
+, winetricks, vkBasalt, nettools, jq, imagemagick, rsync, p7zip, findutils
+, gnused, diffutils, procps, gnutar, wget, vim }:
 stdenv.mkDerivation rec {
   pname = "steamtinkerlaunch";
   version = "10.0";
@@ -19,8 +20,14 @@ stdenv.mkDerivation rec {
     xdotool
     xwininfo
     yad
-    coreutils
-    busybox
+    coreutils-full
+    diffutils
+    procps
+    gnutar
+    wget
+    vim
+    gnused
+    findutils
     git
     xprop
     xrandr
