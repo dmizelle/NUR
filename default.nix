@@ -14,4 +14,5 @@ rec {
   overlays = import ./overlays; # nixpkgs overlays
 
   steamtinkerlaunch = pkgs.callPackage ./pkgs/steamtinkerlaunch { };
+  gamescope = pkgs.callPackage ./pkgs/gamescope { };
 }
